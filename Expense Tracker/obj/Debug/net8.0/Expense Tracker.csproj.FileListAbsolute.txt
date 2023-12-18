@@ -134,3 +134,4 @@ C:\Users\Navin Sah\Desktop\net project\Expense Tracker\Expense Tracker\obj\Debug
 C:\Users\Navin Sah\Desktop\net project\Expense Tracker\Expense Tracker\obj\Debug\net8.0\Expense Tracker.pdb
 C:\Users\Navin Sah\Desktop\net project\Expense Tracker\Expense Tracker\obj\Debug\net8.0\Expense Tracker.genruntimeconfig.cache
 C:\Users\Navin Sah\Desktop\net project\Expense Tracker\Expense Tracker\obj\Debug\net8.0\ref\Expense Tracker.dll
+C:\Users\Navin Sah\Desktop\net project\Expense Tracker\Expense Tracker\obj\Debug\net8.0\Expense Tracker.sourcelink.json
