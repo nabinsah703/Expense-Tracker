@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Register Syncfusion license
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NAaF5cWWJCf1FpR2VGfV5yd0VDalxZTnNaUiweQnxTdEZiW35XcHFVTmVZWUBzXw==");
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
