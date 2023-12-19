@@ -1,0 +1,46 @@
+﻿@model Expense_Tracker.Models.Category
+
+@{
+	ViewData["Title"] = "Create";
+}
+
+<h1>Create Category</h1>
+
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Create">
+			<div asp-validation-summary="ModelOnly"></div>
+			<div class="mb-3">
+				<ejs-textbox id="title" CssClass="e-outline" placeholder="Title" floatLabelType="Always" onclick="changeBorderColor(this.id)" ejs-for="Title"></ejs-textbox>
+				<span asp-validation-for="Title"></span>
+			</div>
+			<div class="mb-3">
+				<ejs-textbox id="icon" CssClass="e-outline" placeholder="Icon" floatLabelType="Always" ejs-for="Icon"></ejs-textbox>
+				<span asp-validation-for="Icon" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<ejs-textbox id="type" CssClass="e-outline" placeholder="Type" floatLabelType="Always" ejs-for="Type"></ejs-textbox>
+				<span asp-validation-for="Type" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	function changeBorderColor(id) {
+		document.getElementById(id).style.borderColor = "1px solid black";
+	}
+</script>
+
+
+	@section Scripts {
+		@{
+			await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+		}
+	}

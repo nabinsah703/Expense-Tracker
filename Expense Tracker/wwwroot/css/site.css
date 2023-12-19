@@ -19,4 +19,11 @@ html {
 
 body {
   margin-bottom: 60px;
+ background-color:whitesmoke;
+ color:black;
+}
+
+.e-bigger {
+    font-size: xx-small;
+   
 }
