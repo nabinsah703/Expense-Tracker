@@ -59,3 +59,48 @@ color:#fff;
     background-color:aqua;
     color:#fff;
 }
+
+
+/*Button*/
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+    color:red;
+}
+
+/*Hyperlink*/
+.no-a-decoration, .no-a-decoration:hover {
+    text-decoration: none;
+    color: grey;
+
+}
+
+
+/*BreadCrumb*/
+.e-breadcrumb a, .e-breadcrumb a:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+
+/*Navbar*/
+nav.navbar {
+    background-color:#fff ;
+}
+
+    nav.navbar i {
+        padding: 10px;
+        border-radius: 60%;
+        cursor: pointer;
+        color:grey;
+        min-inline-size:inherit
+    }
+
+        nav.navbar i:hover, nav.navbar img:hover {
+            cursor: pointer;
+            background-color: #48545f14;
+            transform: scale(1.15) translateZ(0px);
+        }
+
+
+
