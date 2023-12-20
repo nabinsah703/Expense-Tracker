@@ -1,0 +1,53 @@
+﻿@model Expense_Tracker.Models.Category
+
+@{
+	ViewData["Title"] = "Create";
+}
+
+<h1>Create Category</h1>
+
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="CreateAndUpdate">
+			<div asp-validation-summary="ModelOnly"></div>
+			<input type="hidden" name="CategoryId" value="@Model.CategoryId" />
+			<div class="mb-3">
+				<div class='e-btn-group custom-rbt-group'>
+					<input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type=="Expense")" />
+					<label class="e-btn" for="radioleft">Expense</label>
+					<input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type=="Income")" />
+					<label class="e-btn" for="radiomiddle">Income</label>
+
+				</div>
+			</div>
+			<div class="mb-3">
+				<ejs-textbox id="title" CssClass="e-outline" placeholder="Title" floatLabelType="Always" onclick="changeBorderColor(this.id)" ejs-for="Title"></ejs-textbox>
+				<span asp-validation-for="Title"></span>
+			</div>
+			<div class="mb-3">
+				<ejs-textbox id="icon" CssClass="e-outline" placeholder="Icon" floatLabelType="Always" ejs-for="Icon"></ejs-textbox>
+				<span asp-validation-for="Icon" class="text-danger"></span>
+			</div>
+			
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	function changeBorderColor(id) {
+		document.getElementById(id).style.borderColor = "1px solid black";
+	}
+</script>
+
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+	}
+}
