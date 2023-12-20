@@ -32,8 +32,9 @@ body {
     width: 100%;
 }
 
-    .e-btn-group.custom-rbt-group .e-btn {
+    .e-btn-group.custom-rbt-group .e-btn{
         width: 50%;
+       
     }
 
 .custom-rbt-group label.e-btn {
@@ -47,4 +48,14 @@ body {
     background-color: grey;
     color: #212b36;
   /*  border: 1px solid #fff;*/
+}
+
+
+.e-btn-group.custom-rbt-group .e-btn:hover{
+background-color:aqua;
+color:#fff;
+}
+.e-btn-group.custom-rbt-group input:checked + label.e-btn:hover{
+    background-color:aqua;
+    color:#fff;
 }

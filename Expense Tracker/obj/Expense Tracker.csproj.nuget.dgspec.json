@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Navin Sah\\Desktop\\net project\\income\\Expense-Tracker\\Expense Tracker\\Expense Tracker.csproj": {}
+    "C:\\Users\\Navin Sah\\Desktop\\net project\\Expense-Tracker\\Expense Tracker\\Expense Tracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Navin Sah\\Desktop\\net project\\income\\Expense-Tracker\\Expense Tracker\\Expense Tracker.csproj": {
+    "C:\\Users\\Navin Sah\\Desktop\\net project\\Expense-Tracker\\Expense Tracker\\Expense Tracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Navin Sah\\Desktop\\net project\\income\\Expense-Tracker\\Expense Tracker\\Expense Tracker.csproj",
+        "projectUniqueName": "C:\\Users\\Navin Sah\\Desktop\\net project\\Expense-Tracker\\Expense Tracker\\Expense Tracker.csproj",
         "projectName": "Expense Tracker",
-        "projectPath": "C:\\Users\\Navin Sah\\Desktop\\net project\\income\\Expense-Tracker\\Expense Tracker\\Expense Tracker.csproj",
+        "projectPath": "C:\\Users\\Navin Sah\\Desktop\\net project\\Expense-Tracker\\Expense Tracker\\Expense Tracker.csproj",
         "packagesPath": "C:\\Users\\Navin Sah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Navin Sah\\Desktop\\net project\\income\\Expense-Tracker\\Expense Tracker\\obj\\",
+        "outputPath": "C:\\Users\\Navin Sah\\Desktop\\net project\\Expense-Tracker\\Expense Tracker\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
