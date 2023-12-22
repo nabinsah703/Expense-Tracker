@@ -1,31 +1,31 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
- background-color:whitesmoke;
- color:black;
- overflow:hidden;
+    margin-bottom: 60px;
+    background-color: whitesmoke;
+    color: black;
+    overflow: hidden;
 }
 
 .e-bigger {
-    font-size: x-large;  
+    font-size: x-large;
 }
 
 /*Radio Button Group*/
@@ -33,32 +33,32 @@ body {
     width: 100%;
 }
 
-    .e-btn-group.custom-rbt-group .e-btn{
+    .e-btn-group.custom-rbt-group .e-btn {
         width: 50%;
-       
     }
 
 .custom-rbt-group label.e-btn {
     box-shadow: none !important;
     /*border: 1px solid #fff;*/
-    background-color:white;
+    background-color: white;
     color: #000;
 }
 
 .e-btn-group.custom-rbt-group input:checked + label.e-btn {
     background-color: grey;
     color: #212b36;
-  /*  border: 1px solid #fff;*/
+    /*  border: 1px solid #fff;*/
 }
 
 
-.e-btn-group.custom-rbt-group .e-btn:hover{
-background-color:aqua;
-color:#fff;
+.e-btn-group.custom-rbt-group .e-btn:hover {
+    background-color: aqua;
+    color: #fff;
 }
-.e-btn-group.custom-rbt-group input:checked + label.e-btn:hover{
-    background-color:aqua;
-    color:#fff;
+
+.e-btn-group.custom-rbt-group input:checked + label.e-btn:hover {
+    background-color: aqua;
+    color: #fff;
 }
 
 
@@ -66,7 +66,7 @@ color:#fff;
 .btn:focus, .btn:active {
     outline: none !important;
     box-shadow: none;
-    color:red;
+    color: red;
 }
 
 /*Hyperlink*/
@@ -85,15 +85,15 @@ color:#fff;
 
 /*Navbar*/
 nav.navbar {
-    background-color:#fff ;
+    background-color: #fff;
 }
 
     nav.navbar i {
         padding: 10px;
         border-radius: 60%;
         cursor: pointer;
-        color:grey;
-        min-inline-size:inherit
+        color: grey;
+        min-inline-size: inherit
     }
 
         nav.navbar i:hover, nav.navbar img:hover {
@@ -102,14 +102,21 @@ nav.navbar {
             transform: scale(1.15) translateZ(0px);
         }
 
+nav.navbar {
+    margin-left: 20%;
+}
+
+
 
 .e-bigger {
-   font-size:x-large;
+    font-size: x-large;
     background-color: #fff;
 }
+
 .main-content {
     margin-left: 20%;
     overflow-y: auto;
+    height: 92vh;
 }
 /*SideBar*/
 #sidebar {
@@ -123,25 +130,6 @@ nav.navbar {
         width: 100%;
         background-color: inherit;
     }
-
-
-/*Profile Pic*/
-img.profile-pic {
-    margin: auto;
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-}
-
-.profile-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px 20px;
-    border-radius: 12px;
-    cursor: pointer;
-    margin-bottom: 30px;
-}
 
 
 #sidebar-toggler {
@@ -198,16 +186,34 @@ img.profile-pic {
 }
 
 
+
+/*Profile Pic*/
+img.profile-pic {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+
 /*Logo*/
 .logo-wrapper {
-    height: 15%;
+    height: 5%;
     display: flex;
     align-items: center;
-    margin-bottom:5%;
-
+    margin: 5% 0;
 }
 
 .app-logo {
     padding: 20px 5px;
-    width:50%;
+    width: 50%;
 }
