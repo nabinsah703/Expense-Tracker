@@ -28,10 +28,10 @@
 
 	<script id="actionColumnTemplate" type="text/x-template">
 		<div class="d-flex flex-row justify-content-start">
-			<a class="btn btn-sm no-a-decoration" href="/Category/CreateAndUpdate/${CategoryId}">
+			<a class="btn btn-sm no-a-decoration" href="/Transaction/CreateAndUpdate/${TransactionId}">
 				<i class="fa-solid fa-pen fa-lg"></i>
 			 </a>
-				<form action="/Category/Delete/${CategoryId}" method="post">
+				<form action="/Transaction/Delete/${TransactionId}" method="post">
 		@Html.AntiForgeryToken()
 					<button type="submit" class="btn btn-sm btn-link no-a-decoration"
 							onclick="return confirm(&quot;Are sure to delete this record?&quot;)">
