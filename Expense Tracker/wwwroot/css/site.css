@@ -21,6 +21,7 @@ body {
   margin-bottom: 60px;
  background-color:whitesmoke;
  color:black;
+ overflow:hidden;
 }
 
 .e-bigger {
@@ -72,7 +73,6 @@ color:#fff;
 .no-a-decoration, .no-a-decoration:hover {
     text-decoration: none;
     color: grey;
-
 }
 
 
@@ -104,14 +104,110 @@ nav.navbar {
 
 
 .e-bigger {
-    
+   font-size:x-large;
     background-color: #fff;
 }
-#sidebar{
-    background-color:#fff;
-}
-
 .main-content {
     margin-left: 20%;
+    overflow-y: auto;
+}
+/*SideBar*/
+#sidebar {
+    background-color: #fff;
+    border-right: 1px dashed rgba(75,82,85,0.24);
+    padding: 10px 20px;
+    overflow: hidden;
 }
 
+    #sidebar .e-menu-wrapper {
+        width: 100%;
+        background-color: inherit;
+    }
+
+
+/*Profile Pic*/
+img.profile-pic {
+    margin: auto;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+
+#sidebar-toggler {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+    #sidebar-toggler:hover {
+        cursor: pointer;
+        background-color: #48545f14;
+        transform: scale(1.05) translateZ(0px);
+    }
+
+#sidebar.e-close {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+    #sidebar.e-close .app-logo {
+        display: none;
+    }
+
+    #sidebar.e-close .e-anchor-wrap, #sidebar.e-close .e-menu-item.e-menu-caret-icon {
+        font-size: 0px;
+    }
+
+    #sidebar.e-close .profile-wrapper .titles {
+        display: none !important;
+    }
+
+
+    #sidebar.e-open .e-anchor-wrap,
+    #sidebar.e-close .e-menu-icon, #sidebar.e-open .e-menu-icon {
+        visibility: visible;
+    }
+
+#sidebar.e-open .profile-wrapper .titles, #sidebar.e-open .app-logo {
+    display: flex;
+}
+
+#sidebar.e-sidebar.e-right.e-close {
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+#sidebar.e-open #sidebar-toggler:before {
+    content: '\f100'
+}
+
+#sidebar.e-close #sidebar-toggler:before {
+    content: '\f101'
+}
+
+
+/*Logo*/
+.logo-wrapper {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    margin-bottom:5%;
+
+}
+
+.app-logo {
+    padding: 20px 5px;
+    width:50%;
+}
