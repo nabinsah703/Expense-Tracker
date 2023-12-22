@@ -46,7 +46,35 @@ namespace Expense_Tracker.Controllers
             culture.NumberFormat.CurrencyNegativePattern = 1;
             ViewBag.Balance = String.Format(culture, "{0:C0}", Balance);
 
-            return View();
+
+			//Doughnut Chart - Expense By Category
+			ViewBag.DoughnutChartDataExpense = SelectedTransactions
+				.Where(i => i.Category!.Type == "Expense")
+				.GroupBy(j => j.Category!.CategoryId)
+				.Select(k => new
+				{
+					categoryTitleWithIcon = k.First().Category!.Icon + " " + k.First().Category!.Title,
+					amount = k.Sum(j => j.Amount),
+					formattedAmount = k.Sum(j => j.Amount).ToString("C0"),
+				})
+				.OrderByDescending(l => l.amount)
+				.ToList();
+
+			//Doughnut Chart - Income By Category
+			ViewBag.DoughnutChartDataIncome = SelectedTransactions
+				.Where(i => i.Category!.Type == "Income")
+				.GroupBy(j => j.Category!.CategoryId)
+				.Select(k => new
+				{
+					categoryTitleWithIconIncome = k.First().Category!.Icon + " " + k.First().Category!.Title,
+					amountIncome = k.Sum(j => j.Amount),
+					formattedAmountIncome = k.Sum(j => j.Amount).ToString("C0"),
+				})
+				.OrderByDescending(l => l.amountIncome)
+				.ToList();
+
+
+			return View();
 		}
 	}
 }
