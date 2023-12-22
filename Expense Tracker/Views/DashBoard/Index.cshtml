@@ -48,7 +48,7 @@
 			<div class="p-4">
 				<h5 class="fw-bold">Expense By Category</h5>
 			</div>
-			<ejs-accumulationchart id="doughnutchartexpense" enableSmartLabels >
+			<ejs-accumulationchart id="doughnutchartexpense" enableSmartLabels>
 				<e-accumulation-series-collection>
 					<e-accumulation-series dataSource="@ViewBag.DoughnutChartDataExpense"
 										   xName="categoryTitleWithIcon" yName="amount"
@@ -121,4 +121,26 @@
 			</ejs-chart>
 		</div>
 	</div>
+</div>
+
+@*Recent Transactions and More*@
+<div class="row">
+	<div class="col-md-12">
+		<div class="widget">
+			<div class="p-4">
+				<h5 class="fw-bold">Recent Transactions</h5>
+			</div>
+			<div class="px-4 pb-4">
+				<ejs-grid id="recent-transactions"
+						  dataSource="@ViewBag.RecentTransactions" gridLines="None">
+					<e-grid-columns>
+						<e-grid-column headerText="Category" field="CategoryTitleWithIcon"></e-grid-column>
+						<e-grid-column headerText="Date" field="Date" type="date" format="MMM-dd-yy"></e-grid-column>
+						<e-grid-column headerText="Amount" field="FormattedAmount" textAlign="Right"></e-grid-column>
+					</e-grid-columns>
+				</ejs-grid>
+			</div>
+		</div>
+	</div>
+	
 </div>
