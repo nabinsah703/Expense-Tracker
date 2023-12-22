@@ -1,43 +1,53 @@
 ﻿@model Expense_Tracker.Models.Transaction
 
 @{
-    ViewData["Title"] = "Create";
+	ViewData["PageTitle"] = Model.TransactionId == 0 ? "Create a new transaction" : "Edit transaction";
 }
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="CreateAndUpdate">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Amount" class="control-label"></label>
-                <input asp-for="Amount" class="form-control" />
-                <span asp-validation-for="Amount" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Note" class="control-label"></label>
-                <input asp-for="Note" class="form-control" />
-                <span asp-validation-for="Note" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
-                <span asp-validation-for="Date" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+	<div class="col-md-7">
+		<form asp-action="CreateAndUpdate">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<input type="hidden" name="TransactionId" value="@Model.TransactionId" />
+
+			<div class="mb-3">
+				<ejs-datepicker id="date" ejs-for="Date"
+								placeholder="Date" floatLabelType="Always"
+								format="MMM-dd-yyyy"></ejs-datepicker>
+			</div>
+			<div class="mb-3">
+				<ejs-dropdownlist id="ddlcategory" dataSource="@ViewBag.categories" ejs-for="CategoryId" floatLabelType="Always" placeholder="Choose a Category" allowFiltering="true" ignoreAccent="true" filterType="Contains" popupHeight="220px">
+					<e-dropdownlist-fields value="CategoryId" text="TitleWithIcon"></e-dropdownlist-fields>
+				</ejs-dropdownlist>
+			</div>
+			<div class="mb-3">
+				<ejs-numerictextbox id="amount" min=0 format="c0" ejs-for="Amount" Type="Amount" floatLabelType="Always" placeholder="Amount"></ejs-numerictextbox>
+
+				<span asp-validation-for="Amount" class="text-danger"></span>
+			</div>
+			<div class="mb-3">
+				<ejs-textbox id="note" CssClass="e-outline" multiline="true" placeholder="Note" floatLabelType="Always" onclick="changeBorderColor(this.id)" ejs-for="Note"></ejs-textbox>
+
+				<span asp-validation-for="Note" class="text-danger"></span>
+			</div>
+
+			<div class="mb-3">
+				@if (Model.TransactionId == 0)
+				{
+					<ejs-button type="submit" id="submit" content="Create" cssClass="btn btn-primary" />
+				}
+				else
+				{
+					<ejs-button type="submit" id="update" content="Update" cssClass="btn btn-primary" />
+				}
+			</div>
+		</form>
+	</div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
 }
